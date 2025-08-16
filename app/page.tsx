@@ -3,6 +3,7 @@ import { reservationOptions, ReservationType } from "@/types/reservation";
 import { useState } from "react";
 import ClinicReservation from "./components/clinic";
 import RestaurantReservation from "./components/restaurant";
+import HotelReservation from "./components/hotel";
 
 export default function Home() {
   const [reservation, setReservation] = useState<ReservationType>("Clinic");
@@ -45,7 +46,9 @@ export default function Home() {
           </div>
         )}
         {reservation === "Hotel" && (
-          <div className=" p-10 bg-white rounded-2xl space-y-4">3</div>
+          <div className=" p-10 bg-white rounded-2xl space-y-4">
+            <HotelReservation/>
+          </div>
         )}
         {reservation === "Cinema" && (
           <div className=" p-10 bg-white rounded-2xl space-y-4">4</div>
